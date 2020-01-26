@@ -1,0 +1,40 @@
+<h1>Welcome to app!</h1>
+<div class="csv-file-chooser-section">
+
+  <input type="file" #fileImportInput name="File Upload" id="txtFileUpload" (change)="fileChangeListener($event)"
+         accept=".csv"/>
+</div>
+
+<div class="csv-result-table">
+
+  <table>
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>time_new</th>
+      <th>minutes_mets</th>
+      <th>minutes_steps</th>
+      <th>ap_posture</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let csvData of csvRecords;let i = index;">
+
+      <td>{{i+1}}</td>
+      <td>
+        <span>{{csvData.time_new}}</span>
+      </td>
+      <td>
+        <span>{{csvData.minutes_mets}}</span>
+      </td>
+      <td>
+        <span>{{csvData.minutes_steps}}</span>
+      </td>
+      <td>
+        <span>{{csvData.ap_posture}}</span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
