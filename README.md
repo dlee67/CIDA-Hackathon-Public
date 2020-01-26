@@ -9,3 +9,5 @@ Therefore, I decided to use Emscripten to bump up the performance,
 but the below happened.
 
 ![Image description](https://github.com/dlee67/CIDA-Hackathon-Public/blob/master/error.jpeg)
+
+I am guessing only certain amount of memories are allowed to be used in Emscripten?
